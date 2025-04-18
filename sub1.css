@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Poppins:wght@300;400;600&display=swap');
+
+/* General Table Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #87CEEB, #FFFFFF);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centering */
+    min-height: 100vh;
+    height: auto;
+    overflow: auto; /* Enable scrolling */
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px; /* Slightly reduced */
+    margin-bottom: 20px;
+    color: #003366;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+    font-family: 'Poppins', sans-serif;
+}
+
+table {
+    width: 90%; /* Adjusted for better centering */
+    max-width: 1200px; /* Increased size */
+    border-collapse: collapse;
+    margin: 20px auto; /* Centered */
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    max-height: 80vh; /* Prevents table from becoming too large */
+    overflow-y: auto;
+}
+
+table:hover {
+    transform: scale(1.02);
+}
+
+th, td {
+    padding: 18px; /* Slightly bigger */
+    border: none; /* Clean look without borders */
+    font-size: 20px; /* Increased size */
+    font-family: 'Montserrat', sans-serif;
+}
+
+th {
+    background: linear-gradient(135deg, #87CEEB, #5A9);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+td a {
+    text-decoration: none;
+    background: #f4a261;
+    color: white;
+    padding: 10px 15px; /* Adjusted for better fit */
+    border-radius: 8px;
+    transition: 0.3s;
+    font-weight: bold;
+    display: inline-block;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
+
+td a:hover {
+    background: #e76f51;
+    transform: scale(1.07);
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover effect on rows */
+tbody tr:hover {
+    background: rgba(135, 206, 235, 0.4);
+    transition: 0.3s;
+}
+
+/* Fix Dropdown Link Spacing */
+.previous-year-dropdown-content a {
+    display: block;
+    margin-bottom: 6px;
+    padding: 5px 0;
+}
+
+/* Ensure Table Responsiveness on Smaller Screens */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+        font-size: 14px;
+    }
+    
+    th, td {
+        padding: 12px;
+        font-size: 18px;
+    }
+    
+    td a {
+        padding: 8px 12px; /* Adjusted for smaller screens */
+        font-size: 16px;
+    }
+}

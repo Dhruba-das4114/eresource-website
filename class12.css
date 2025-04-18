@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Poppins:wght@300;400;600&display=swap');
+
+/* General Table Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #87CEEB, #FFFFFF);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Allow content to grow downward */
+    min-height: 100vh;
+    height: auto;
+    overflow-y: auto; /* Enables vertical scrolling */
+}
+
+h1 {
+    text-align: center;
+    font-size: 32px; /* Reduced size for better fit */
+    margin-bottom: 15px;
+    color: #003366;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    font-family: 'Poppins', sans-serif;
+}
+
+table {
+    width: 85%; /* Reduced table width for better fit */
+    max-width: 900px; /* Adjusted for better screen fit */
+    border-collapse: collapse;
+    margin: 15px auto;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+}
+
+th, td {
+    padding: 12px; /* Reduced padding to fit more content */
+    border: 1px solid #ddd;
+    font-size: 18px; /* Reduced text size for better visibility */
+    font-family: 'Montserrat', sans-serif;
+}
+
+th {
+    background: linear-gradient(135deg, #87CEEB, #5A9);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+td a {
+    text-decoration: none;
+    background: #f4a261;
+    color: white;
+    padding: 12px 18px; /* Increased padding for better button size */
+    border-radius: 8px;
+    transition: 0.3s;
+    font-weight: bold;
+    display: inline-block;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px; /* Optimized text size */
+    margin: 5px; /* Added margin for spacing */
+}
+
+td a:hover {
+    background: #e76f51;
+    transform: scale(1.05);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Fix for Previous Year Question Papers */
+td a.year-button {
+    display: block;
+    text-align: center;
+    width: 100%; /* Full width */
+    max-width: 350px; /* Adjust width to fit properly */
+    padding: 15px 0;
+    margin: 10px auto; /* Adds spacing between buttons */
+    background: #f4a261;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 30px; /* Rounded edges */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+td a.year-button:hover {
+    background: #e76f51;
+    transform: scale(1.05);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover effect on rows */
+tbody tr:hover {
+    background: rgba(135, 206, 235, 0.4);
+    transition: 0.3s;
+}
+
+/* Fix for dropdown scrolling issue */
+.previous-year-dropdown-content {
+    max-height: 200px; /* Reduced dropdown height */
+    overflow-y: auto; /* Enables scrolling */
+    padding: 5px;
+}
+
+/* Ensures each year link is spaced properly */
+.previous-year-dropdown-content a {
+    display: block;
+    margin-bottom: 5px;
+    padding: 4px 0;
+}
+
+/* Make sure table does not overflow on smaller screens */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    table {
+        width: 95%;
+    }
+
+    th, td {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    td a {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    td a.year-button {
+        min-width: 150px; /* Adjusted for smaller screens */
+        padding: 12px 20px;
+    }
+}
